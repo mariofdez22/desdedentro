@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desde dentro</title>
+    <link rel="stylesheet" href="css/cabinet-grotesk.css">
+            <link rel="stylesheet" href="css/labs.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo-form.css">
+    
+    <link id="scrollUpTheme" rel="stylesheet" href="css/themes/image.css">
+
+
+        <script src="dist/lib/jquery-1.11.1.min.js"></script>
+        <script src="dist/jquery.scrollUp.min.js"></script>
+        <script>
+
+            // Parse URL Queries Method
+            (function ($) {
+                $.getQuery = function (query) {
+                    query = query.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]');
+                    var expr = '[\\?&]' + query + '=([^&#]*)';
+                    var regex = new RegExp(expr);
+                    var results = regex.exec(window.location.href);
+                    if (results !== null) {
+                        return results[1];
+                    } else {
+                        return false;
+                    }
+                };
+            })(jQuery);
+
+            $(function () {
+
+                // Change URIs
+                $('.pill-switch').click(function () {
+                    window.location = '?theme=pill';
+                });
+
+                $('.tab-switch').click(function () {
+                    window.location = '?theme=tab';
+                });
+
+                $('.image-switch').click(function () {
+                    window.location = '?theme=image';
+                });
+
+                $('.link-switch').click(function () {
+                    window.location = '?theme=link';
+                });
+
+                // Set theme based on URI
+                if ($.getQuery('theme') === 'pill') {
+                    $(function () {
+                        $.scrollUp({
+                            animation: 'fade',
+                            activeOverlay: '#00FFFF'
+                        });
+                    });
+                    $('.pill-switch').addClass('active');
+                    $('#scrollUpTheme').attr('href', 'css/themes/pill.css?1.1');
+                } else if ($.getQuery('theme') === 'link') {
+                    $(function () {
+                        $.scrollUp({
+                            animation: 'fade',
+                            activeOverlay: '#00FFFF'
+                        });
+                    });
+                    $('#scrollUpTheme').attr('href', 'css/themes/link.css?1.1');
+                    $('.link-switch').addClass('active');
+                } else if ($.getQuery('theme') === 'image') {
+                    $(function () {
+                        $.scrollUp({
+                            animation: 'fade',
+                            activeOverlay: '#00FFFF',
+                            scrollImg: {
+                                active: true,
+                                type: 'background',
+                                src: 'img/top.png'
+                            }
+                        });
+                    });
+                    $('#scrollUpTheme').attr('href', 'css/themes/image.css?1.1');
+                    $('.image-switch').addClass('active');
+                } else {
+                    $(function () {
+                        $.scrollUp({
+                            animation: 'slide',
+                            activeOverlay: '#00FFFF'
+                        });
+                    });
+                    $('#scrollUpTheme').attr('href', 'css/themes/tab.css?1.1');
+                    $('.tab-switch').addClass('active');
+                }
+
+                // Toggle overlay
+                $('#toggleActive').click(function () {
+                    $('#scrollUp-active').toggle();
+
+                    var text = $(this).text() == 'Hide activeOverlay' ? 'Show activeOverlay' : 'Hide activeOverlay';
+                    $(this)
+                        .text(text)
+                        .toggleClass('active');
+                });
+            });
+
+        </script>
+
+
+
+</head>
+<body>
+   <div  id="Header_dos">
+        <h1><a href="index.html"><img id=logo_cabecera src="img/SVG/Recurso%201.svg"></a></h1>
+        <nav>
+           <ul>
+               <li><a href="#primera-seccion">Positivo</a> </li>
+               <li><a href="#segunda-seccion">Negativo</a></li>
+               <li><a href="#tercera-seccion">Fusión</a></li>
+
+           </ul> 
+        </nav>
+        </div>
+   <main>
+    <form>
+       <div id="mainwrapper">
+        <div>
+        <legend><p id=titulo_seccion>Datos de contacto:</p></legend>
+            <fieldset>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <br>
+                    <input id="nombre" name="nombre" required/><br>
+                </div>
+                <div class="form-group">
+                    <label for="surname">Apellidos</label>
+                    <br>
+                    <input id="surname" name="surname" required/>
+                    <br>
+                </div> 
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <br>
+                    <input type="tel" id="phone" name="phone" maxlength="9" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+                    <br>    
+                </div>
+            </fieldset>
+        </div>
+                
+                
+        <legend><p id=titulo_seccion>Detalles del pedido:</p></legend>
+            <fieldset>
+               <div class="form-group">
+                    <label for="direccion">Dirección de envío</label>
+                    <br>
+                    <input id="direccion" name="direccion" required/><br>
+                </div>
+                <div class="form-group" id="opciones-envio">
+                    <p class=formulario required>Opciones de envío</p>
+                    <label >Envío estándar </label>
+                    <input id="radio" type="radio" name="customer" value="envio" checked>
+                    <label >Punto de recogida </label>
+                    <input id="radio" type="radio" name="customer" value="recogida" >
+                </div>
+                <div class="form-group" id="opciones-envio">
+                    <p class=formulario required>Incluir ticket regalo</p>
+                    <label >Sí</label>
+                    <input id="radio" type="radio" name="ticketregalo" value="si" checked>
+                    <label >No </label>
+                    <input id="radio" type="radio" name="ticketregalo" value="no" >
+                </div>
+            </fieldset>
+
+
+                
+                
+        <div>
+        <legend><p id=titulo_seccion>Pago:</p></legend>
+            <fieldset>
+                <div class="form-group">
+                    <label for="direccion">Dirección de facturación</label>
+                    <br>
+                    <input id="direccion" name="direccion" required/><br>
+                </div>
+                <div class="form-group">
+                    <label for="username">Número de tarjeta</label><br>
+                    <input type="text" id="username" name="username" required><br>
+                    <label for="bdaymonth">Caducidad (mes/aaaa)</label><br>
+                    <input type="month" id="cad" name="cad" required><br>
+                    <label for="CVV">CVV:</label><br>
+                    <input type="password" id="CVV" name="CVV" minlength="3" maxlength="3" required>
+                </div>
+            </fieldset>
+        </div>
+        </div>
+     
+     
+        <div id="botones">
+            <button class="button">Enviar</button>
+            <a href="formulario.html"><div class="button">Reset</div></a>
+            <a href="index.html"><div class="button">Cancelar</div></a>
+        </div>
+    </form>
+   
+    </main>
+    
+    <footer>
+        <p>Realauri x MarioDeJerez x DeDiosMalo © 2021. Valencia.</p>
+    </footer>
+
+
+
+</body>
+</html>

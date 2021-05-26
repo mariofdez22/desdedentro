@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desde dentro</title>
+    <link rel="stylesheet" href="css/cabinet-grotesk.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+        
+         <!--stellar principio-->
+         
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script>
+
+                $(document).ready(function(){
+
+                    $('body').stellar();
+                    
+                    $('#miTour').joyride({
+         		 autoStart : true
+         		// 'tipLocation': 'bottom',         // 'top' or 'bottom' in relation to parent
+				//  'nubPosition': 'auto',           // override on a per tooltip bases
+				//  'scrollSpeed': 300,              // Page scrolling speed in ms
+				//  'timer': 2000,                   // 0 = off, all other numbers = time(ms) 
+				//  'startTimerOnClick': true,       // true/false to start timer on first click
+				//  'nextButton': true,              // true/false for next button visibility
+				//  'tipAnimation': 'pop',           // 'pop' or 'fade' in each tip
+				//  'pauseAfter': [],                // array of indexes where to pause the tour after
+				//  'tipAnimationFadeSpeed': 300,    // if 'fade'- speed in ms of transition
+				//  'cookieMonster': true,           // true/false for whether cookies are used
+				//  'cookieName': 'JoyRide',         // choose your own cookie name
+				//  'cookieDomain': false,           // set to false or yoursite.com
+				//  'tipContainer': body,            // Where the tip be attached if not inline
+				//  'postRideCallback': $noop,       // a method to call once the tour closes
+				//  'postStepCallback': $noop        // A method to call after each step
+        	});
+
+            });
+
+
+            </script>
+        
+         <!--stellar fin-->
+
+        <!--Joyride principio-->
+        
+        <link rel="stylesheet" href="css/joyride-2.1.css">
+
+		<script src="js/jquery.joyride-2.1.js"></script>
+
+        <!--joyride fin-->
+
+    
+    	
+</head>
+<body>
+  <div id="container">
+   
+    <header class="header" id="Header_uno">
+        
+        <nav>
+           <ul>
+               <li><a class="adelheader1" href="#primera-seccion">Positivo</a> </li>
+               <li><a class="adelheader1" href="#segunda-seccion">Negativo</a></li>
+               <li><a class="adelheader1" href="#tercera-seccion">Fusión</a></li>
+
+           </ul> 
+        </nav>
+    </header>
+    
+    <section id="hero">  
+        
+            <img id=logo_hero src="img/SVG/Recurso%202.svg">
+        
+    </section>
+    
+    
+    <main>
+        <div id="header_dos">
+        <h1><img id=logo_cabecera src="img/SVG/Recurso%201.svg"></h1>
+        <nav>
+           <ul>
+               <li><a href="#primera-seccion">Positivo</a> </li>
+               <li><a href="#segunda-seccion">Negativo</a></li>
+               <li><a href="#tercera-seccion">Fusión</a></li>
+
+           </ul> 
+        </nav>
+        </div>
+        
+        
+        <section id="intro">
+            <div>
+            <h1 id=comillas>«</h1>
+            <h3 id="introduccion"> Mi cuerpo se mueve a través de emociones y sentimientos creando unos estímulos a los que reacciono positiva o negativamente. Ambos son necesarios, después de todo, no hay luz sin oscuridad; no hay valor sin miedo; no hay cerca sin lejos; nada existe sin su opuesto. La clave está en encontrar el termino medio, la fusión, el balance entre estos. Cuando se consigue esto, se deja ser, se contacta con una sensación de plenitud, de paz y de amor que amplía la conciencia hasta trascender de uno mismo.»</h3></div>
+        </section>
+        
+        <section>
+            <div id="separador_1" data-stellar-background-ratio="0.3">
+            </div>
+        </section>
+
+        <section id="primera-seccion">
+            <div class="arriba">
+            <div id="titulo_seccion">Positivo</div>
+            <div class="izquierda">
+                <p class=textolook>Esa sensación de luz, colores, viveza, un dia soleado, comer tu comida favorita en un lugar bonito, cuando te enamoras, esa sensación de cosquilleo en el estómago y de ver bonito todo lo que está a tu alrededor. Paz y tranquilidad mental enfocada hacia el éxito.</p>
+           </div>
+           <div class="derecha">
+               <img id="lookunoimg" src="img/lookpositivo.jpg" alt="look positivo">
+           </div>
+            </div>
+            <div class="abajo">
+               <div class="tecnicos" id="tecnicouno"><img src="img/tecnicos3.png" alt="tecnico look positivo"></div>
+               <div id="gifpositivo"><img src="img/gifpositivo.gif" alt=""></div>
+           </div>
+       </section>
+              
+       <section class="triple-columna" id=segunda-seccion>
+           <div class="arriba">
+              <div id="titulo_seccion">Negativo</div>
+               <div ><p  class=textolook id="textosegunda">Ver solo la parte mala de las cosas, sentir culpa, miedo, agotamiento, que todo está perdido, que nada  saldrá bien. Una tormenta y lucha continua de la mente y de uno mismo.</p></div>
+           <div class="collage_foto">
+               <img id="collage_1" src="img/lookverde3.jpg" alt="look negativo 1">
+               <img id="collage_2" src="img/lookverde2.jpg" alt="look negativo 2">
+               <img id="collage_3" src="img/LOOK_01-39.jpg" alt="look negativo 3">
+           </div>
+           </div>
+           <div class="abajo">
+               <div class="tecnicos" id="tecnico_dos"><img src="img/tecnicos2.png" alt="tecnico look positivo"></div>     
+               <div class="tecnicos" id="gifnegativo"><img src="img/gifnegativo.gif" alt="tecnico look positivo"></div>
+           </div>
+       </section>
+    
+       
+       <section class="triple-columna" id="tercera-seccion">
+            <div class="arriba">
+            <div id="titulo_seccion">Fusión</div>
+            <div id="fotofusion">
+               <img src="img/fusionn.jpg" alt="look fusión">
+            </div>
+            <p id="textotercera" class=textolook>Lo bueno y lo malo conviviendo entre sí, el ying y el yang, la lección de un fracaso o el sacrificio de un éxito. Al final, esa es la vida, un cúmulo de circunstancias buenas y malas con las que tenemos que vivir y conjuntamente llevarlas de la mejor forma posible.</p>
+            </div>
+            <div class="abajo">
+               <div class="tecnicos" id="tecnico_tres"><img src="img/tecnicos.png" alt="tecnico look positivo"></div>     
+               <div class="tecnicos" id="giffusion"><img src="img/giffusion.gif" alt="tecnico look positivo"></div>
+           </div>
+       </section>
+        
+
+
+    </main>
+    
+    <footer>
+       <div id="creditos">
+       <h2>Creditos:</h2>
+       <div id="textocreditos">
+            <p>Diseño, producción y estilismo: <a href="https://instagram.com/realauri">Realauri</a></p>
+            <p>Fotografía: <a href="http://dediosmalo.com/">De Dios Malo</a></p>
+            <p>Vídeo y diseño web: <a href="https://instagram.com/mariofernandez.tattoo?utm_medium=copy_link">Mario Fernandez</a></p>
+            <p>Gráficos: <a href="http://staboam.com/">Staboam</a></p>
+            <p>Modelo: <a href="http://gemaribera.com/">Gema Ribera</a></p>
+        </div>
+        
+
+
+        </div>
+    </footer>
+   
+   </div>
+
+</body>
+</html>

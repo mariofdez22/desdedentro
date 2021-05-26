@@ -1,0 +1,74 @@
+form {
+    font-family:'CabinetGrotesk-Variable';
+        width: 90%;
+    /*border: solid 3px blue;*/
+    padding-top: 80px;
+    margin: 20px auto;
+/*    display: flex;*/
+ 
+}
+
+fieldset {
+    margin: 8px 30px;
+    border: none;
+    font-family:'CabinetGrotesk-Variable';
+        font-weight: 200;
+}
+
+legend {
+    font-family:'CabinetGrotesk-Variable';
+        font-weight: 460;
+}
+
+.form-group {
+    margin: 10px; 
+
+}
+
+input {
+ margin:5px 0;
+    width: 200px
+}
+
+#opciones-envio {
+    width: 400px;
+}
+
+#radio {
+     margin: 5px 0;
+    width: 15px
+}
+
+main {
+ 
+}
+
+button {
+          width:100px;
+    border:solid 0.5px black;
+    text-align:center;
+    font-weight: 500;
+    margin-top: 10px;
+    background-color: white;
+    font-weight: 500;      
+
+}
+
+.button {
+    width:100px;
+    border:solid 0.5px black;
+    text-align:center;
+    font-weight: 500;
+    margin-top: 10px;
+    background-color: white;
+    font-weight: 500;
+}
+
+
+
+#botones {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin: 50px 0 80px 40px;
+}

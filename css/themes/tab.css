@@ -1,0 +1,8 @@
+/* Image style */
+#scrollUp {
+    background-image: url("../../img/Mesa%20de%20trabajo%201.png");
+    bottom: 23px;
+    right: 23px;
+    width: 40px;    /* Width of image */
+    height: 40px;   /* Height of image */
+}
